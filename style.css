@@ -577,3 +577,65 @@ h1, h2, h3, h4 { font-family: 'Space Grotesk', 'Inter', sans-serif; line-height:
   .hero__cta { flex-direction: column; }
   .hero__cta .btn { width: 100%; }
 }
+
+/* ===== Demo modal ===== */
+.modal {
+  position: fixed; inset: 0; z-index: 200;
+  display: flex; align-items: center; justify-content: center;
+  padding: 24px;
+  opacity: 0; visibility: hidden;
+  transition: opacity 0.35s var(--ease), visibility 0.35s var(--ease);
+}
+.modal.open { opacity: 1; visibility: visible; }
+.modal__overlay {
+  position: absolute; inset: 0;
+  background: rgba(5, 4, 12, 0.7);
+  backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+}
+.modal__card {
+  position: relative; z-index: 1;
+  max-width: 460px; width: 100%;
+  padding: 48px 40px 40px;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(180deg, rgba(168,85,247,0.06), rgba(13,11,26,0.9));
+  border: 1px solid var(--border-strong);
+  box-shadow: var(--shadow-card), 0 0 60px rgba(168,85,247,0.2);
+  backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px);
+  text-align: center;
+  transform: translateY(24px) scale(0.96);
+  transition: transform 0.4s var(--ease);
+}
+.modal.open .modal__card { transform: translateY(0) scale(1); }
+.modal__close {
+  position: absolute; top: 16px; right: 16px;
+  width: 36px; height: 36px; border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--surface); border: 1px solid var(--border);
+  color: var(--text-2); cursor: pointer;
+  transition: all 0.25s var(--ease);
+}
+.modal__close:hover { color: var(--text); border-color: var(--purple); transform: rotate(90deg); }
+.modal__icon {
+  width: 72px; height: 72px; margin: 0 auto 24px;
+  border-radius: 18px;
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(168,85,247,0.1);
+  border: 1px solid rgba(168,85,247,0.2);
+  animation: iconPop 0.5s var(--ease) 0.15s both;
+}
+@keyframes iconPop {
+  from { transform: scale(0.5) rotate(-15deg); opacity: 0; }
+  to { transform: scale(1) rotate(0); opacity: 1; }
+}
+.modal__title {
+  font-size: 1.5rem; margin-bottom: 14px;
+}
+.modal__text {
+  color: var(--text-2); font-size: 1rem; line-height: 1.65;
+  margin-bottom: 32px; max-width: 360px; margin-left: auto; margin-right: auto;
+}
+.modal__btn { max-width: 200px; margin: 0 auto; }
+@media (max-width: 480px) {
+  .modal__card { padding: 40px 24px 32px; }
+  .modal__title { font-size: 1.3rem; }
+}

@@ -9,7 +9,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
-  </head>
+    <meta property="og:image" content="https://bolt.new/static/og_default.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://bolt.new/static/og_default.png">
+</head>
   <body>
     <!-- Animated background -->
     <div class="bg-grid" aria-hidden="true"></div>
@@ -47,8 +50,8 @@
         </nav>
 
         <div class="nav__actions">
-          <a href="#" class="btn btn--ghost btn--sm">Sign in</a>
-          <a href="#pricing" class="btn btn--primary btn--sm">Get started</a>
+          <a href="#" class="btn btn--ghost btn--sm" data-cta>Sign in</a>
+          <a href="#" class="btn btn--primary btn--sm" data-cta>Get started</a>
         </div>
 
         <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
@@ -73,7 +76,7 @@
           so you and your team ship faster without the overwhelm.
         </p>
         <div class="hero__cta">
-          <a href="#pricing" class="btn btn--primary btn--lg">
+          <a href="#" class="btn btn--primary btn--lg" data-cta>
             Start free — no card needed
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
@@ -291,7 +294,7 @@
             <li class="muted"><span class="check check--off"></span> Automations</li>
             <li class="muted"><span class="check check--off"></span> Team collaboration</li>
           </ul>
-          <a href="#" class="btn btn--ghost btn--block">Get started free</a>
+          <a href="#" class="btn btn--ghost btn--block" data-cta>Get started free</a>
         </article>
 
         <!-- Pro (highlighted) -->
@@ -314,7 +317,7 @@
             <li><span class="check"></span> Smart analytics</li>
             <li><span class="check"></span> Priority support</li>
           </ul>
-          <a href="#" class="btn btn--primary btn--block">Start 14-day trial</a>
+          <a href="#" class="btn btn--primary btn--block" data-cta>Start 14-day trial</a>
         </article>
 
         <!-- Enterprise -->
@@ -336,7 +339,7 @@
             <li><span class="check"></span> Dedicated success manager</li>
             <li><span class="check"></span> 99.9% uptime SLA</li>
           </ul>
-          <a href="#" class="btn btn--ghost btn--block">Contact sales</a>
+          <a href="#" class="btn btn--ghost btn--block" data-cta>Contact sales</a>
         </article>
       </div>
     </section>
@@ -377,8 +380,8 @@
         <h2>Ready to reclaim your focus?</h2>
         <p>Join 12,000+ teams shipping faster with TaskFlow AI. Free forever — upgrade only when you need more.</p>
         <div class="cta-band__actions">
-          <a href="#pricing" class="btn btn--primary btn--lg">Start free today</a>
-          <a href="#" class="btn btn--ghost btn--lg">Book a demo</a>
+          <a href="#" class="btn btn--primary btn--lg" data-cta>Start free today</a>
+          <a href="#" class="btn btn--ghost btn--lg" data-cta>Book a demo</a>
         </div>
       </div>
     </section>
@@ -442,6 +445,29 @@
         </div>
       </div>
     </footer>
+
+    <!-- Demo modal -->
+    <div class="modal" id="demoModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true">
+      <div class="modal__overlay" data-close></div>
+      <div class="modal__card">
+        <button class="modal__close" data-close aria-label="Close dialog">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+        <div class="modal__icon">
+          <svg width="40" height="40" viewBox="0 0 48 48" fill="none">
+            <rect x="6" y="6" width="36" height="36" rx="10" stroke="url(#mg1)" stroke-width="2.5"/>
+            <path d="M16 24l6 6 14-14" stroke="url(#mg2)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <defs>
+              <linearGradient id="mg1" x1="6" y1="6" x2="42" y2="42" gradientUnits="userSpaceOnUse"><stop stop-color="#a855f7"/><stop offset="1" stop-color="#06b6d4"/></linearGradient>
+              <linearGradient id="mg2" x1="16" y1="24" x2="36" y2="16" gradientUnits="userSpaceOnUse"><stop stop-color="#06b6d4"/><stop offset="1" stop-color="#a855f7"/></linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <h2 class="modal__title" id="modalTitle">Thank you for exploring this demo!</h2>
+        <p class="modal__text">This is a portfolio preview. To build your custom website or SaaS product, contact the developer directly.</p>
+        <button class="btn btn--primary btn--block modal__btn" data-close>Got it</button>
+      </div>
+    </div>
 
     <script src="script.js"></script>
   </body>
