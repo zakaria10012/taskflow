@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="TaskFlow AI — the AI-powered productivity platform that plans, prioritizes, and automates your work so you can focus on what matters." />
+    <title>TaskFlow AI — AI-Powered Productivity, Reimagined</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Animated background -->
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+
+    <!-- Navbar -->
+    <header class="nav" id="nav">
+      <div class="nav__inner">
+        <a href="#" class="nav__logo">
+          <span class="nav__logo-mark">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 6.5C4 5.12 5.12 4 6.5 4H21.5C22.88 4 24 5.12 24 6.5V21.5C24 22.88 22.88 24 21.5 24H6.5C5.12 24 4 22.88 4 21.5V6.5Z" stroke="url(#lg)" stroke-width="2"/>
+              <path d="M9 14L13 18L19 10" stroke="url(#lg2)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <defs>
+                <linearGradient id="lg" x1="4" y1="4" x2="24" y2="24" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#a855f7"/>
+                  <stop offset="1" stop-color="#06b6d4"/>
+                </linearGradient>
+                <linearGradient id="lg2" x1="9" y1="14" x2="19" y2="10" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#06b6d4"/>
+                  <stop offset="1" stop-color="#a855f7"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </span>
+          <span class="nav__logo-text">TaskFlow<span class="nav__logo-accent">AI</span></span>
+        </a>
+
+        <nav class="nav__links" id="navLinks" aria-label="Primary">
+          <a href="#features">Features</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#faq">FAQ</a>
+          <a href="#" class="nav__link-muted">Blog</a>
+        </nav>
+
+        <div class="nav__actions">
+          <a href="#" class="btn btn--ghost btn--sm">Sign in</a>
+          <a href="#pricing" class="btn btn--primary btn--sm">Get started</a>
+        </div>
+
+        <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero__inner">
+        <div class="hero__badge">
+          <span class="hero__badge-dot"></span>
+          Now with GPT-5 powered task automation
+        </div>
+        <h1 class="hero__title">
+          Your work, <span class="text-gradient">automated</span>.<br />
+          Your focus, <span class="text-gradient-2">amplified</span>.
+        </h1>
+        <p class="hero__subtitle">
+          TaskFlow AI plans your day, prioritizes your tasks, and automates the busywork —
+          so you and your team ship faster without the overwhelm.
+        </p>
+        <div class="hero__cta">
+          <a href="#pricing" class="btn btn--primary btn--lg">
+            Start free — no card needed
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="#features" class="btn btn--ghost btn--lg">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M8 5v14l11-7-11-7Z" fill="currentColor"/></svg>
+            Watch demo
+          </a>
+        </div>
+        <div class="hero__social">
+          <div class="hero__avatars">
+            <span class="avatar" style="background:linear-gradient(135deg,#a855f7,#6366f1)">JL</span>
+            <span class="avatar" style="background:linear-gradient(135deg,#06b6d4,#3b82f6)">SK</span>
+            <span class="avatar" style="background:linear-gradient(135deg,#f59e0b,#ef4444)">MR</span>
+            <span class="avatar" style="background:linear-gradient(135deg,#10b981,#06b6d4)">AP</span>
+            <span class="avatar avatar--more">+12k</span>
+          </div>
+          <p class="hero__social-text">
+            Trusted by <strong>12,000+</strong> teams at companies like Acme, Globex, and Initech
+          </p>
+        </div>
+      </div>
+
+      <!-- App preview mockup -->
+      <div class="hero__preview reveal">
+        <div class="preview">
+          <div class="preview__bar">
+            <span class="preview__dot preview__dot--r"></span>
+            <span class="preview__dot preview__dot--y"></span>
+            <span class="preview__dot preview__dot--g"></span>
+            <span class="preview__url">app.taskflow.ai</span>
+          </div>
+          <div class="preview__body">
+            <div class="preview__sidebar">
+              <div class="preview__sidebar-item preview__sidebar-item--active">
+                <span class="dot dot--purple"></span> Inbox <span class="badge">3</span>
+              </div>
+              <div class="preview__sidebar-item"><span class="dot dot--cyan"></span> Today</div>
+              <div class="preview__sidebar-item"><span class="dot dot--green"></span> Upcoming</div>
+              <div class="preview__sidebar-item"><span class="dot dot--amber"></span> Projects</div>
+              <div class="preview__sidebar-item"><span class="dot dot--pink"></span> Team</div>
+            </div>
+            <div class="preview__main">
+              <div class="preview__header">
+                <span>Today's plan — AI generated</span>
+                <span class="preview__ai">✨ Auto-planned</span>
+              </div>
+              <div class="preview__task">
+                <span class="preview__check"></span>
+                <div class="preview__task-body">
+                  <span class="preview__task-title">Review Q3 roadmap draft</span>
+                  <span class="preview__task-meta">High priority · 30 min</span>
+                </div>
+                <span class="preview__tag preview__tag--purple">Focus</span>
+              </div>
+              <div class="preview__task">
+                <span class="preview__check"></span>
+                <div class="preview__task-body">
+                  <span class="preview__task-title">Reply to client onboarding emails</span>
+                  <span class="preview__task-meta">Automated · 5 drafts ready</span>
+                </div>
+                <span class="preview__tag preview__tag--cyan">AI</span>
+              </div>
+              <div class="preview__task preview__task--done">
+                <span class="preview__check preview__check--done">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+                <div class="preview__task-body">
+                  <span class="preview__task-title">Weekly standup notes</span>
+                  <span class="preview__task-meta">Completed · auto-summarized</span>
+                </div>
+                <span class="preview__tag preview__tag--green">Done</span>
+              </div>
+              <div class="preview__task">
+                <span class="preview__check"></span>
+                <div class="preview__task-body">
+                  <span class="preview__task-title">Design review with Sarah</span>
+                  <span class="preview__task-meta">Calendar synced · 2:00 PM</span>
+                </div>
+                <span class="preview__tag preview__tag--amber">Meeting</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Logos strip -->
+    <section class="logos">
+      <p class="logos__label">Powering teams at fast-growing companies</p>
+      <div class="logos__row">
+        <span class="logos__logo">◆ Acme</span>
+        <span class="logos__logo">● Globex</span>
+        <span class="logos__logo">▲ Initech</span>
+        <span class="logos__logo">◆ Umbrella</span>
+        <span class="logos__logo">● Stark</span>
+        <span class="logos__logo">▲ Hooli</span>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features" id="features">
+      <div class="section-head">
+        <span class="section-eyebrow">Features</span>
+        <h2 class="section-title">Everything you need to <span class="text-gradient">do less, ship more</span></h2>
+        <p class="section-sub">AI-native features that replace five different tools — task management, scheduling, automation, notes, and analytics — in one beautifully simple workspace.</p>
+      </div>
+
+      <div class="features__grid">
+        <article class="feature-card reveal">
+          <div class="feature-card__icon feature-card__icon--purple">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>AI task planning</h3>
+          <p>Wake up to a smart daily plan. TaskFlow AI ranks your tasks by deadline, effort, and impact — then blocks focus time on your calendar automatically.</p>
+        </article>
+
+        <article class="feature-card reveal">
+          <div class="feature-card__icon feature-card__icon--cyan">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Automated workflows</h3>
+          <p>Turn repetitive work into one-click automations. Assign, label, escalate, and notify — no code, no Zapier, no headache.</p>
+        </article>
+
+        <article class="feature-card reveal">
+          <div class="feature-card__icon feature-card__icon--green">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="2"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Team collaboration</h3>
+          <p>Share projects, comment in context, and let AI summarize threads into action items so nothing falls through the cracks.</p>
+        </article>
+
+        <article class="feature-card reveal">
+          <div class="feature-card__icon feature-card__icon--amber">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M3 3v18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M7 14l4-4 3 3 5-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Smart analytics</h3>
+          <p>See where your time goes. Weekly AI insights surface bottlenecks, burnout risk, and your highest-leverage work — before they become problems.</p>
+        </article>
+
+        <article class="feature-card reveal">
+          <div class="feature-card__icon feature-card__icon--pink">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="2"/><path d="M3 9h18M9 21V9" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Unified workspace</h3>
+          <p>Tasks, docs, goals, and calendar in one place. Switch tools without switching tabs — your context is always one keystroke away.</p>
+        </article>
+
+        <article class="feature-card reveal">
+          <div class="feature-card__icon feature-card__icon--blue">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Enterprise security</h3>
+          <p>SOC 2 Type II, SSO/SAML, and granular permissions. Your data is encrypted at rest and in transit, with audit logs for every action.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Stats band -->
+    <section class="stats">
+      <div class="stats__inner">
+        <div class="stat reveal">
+          <span class="stat__num" data-count="40">0</span><span class="stat__suffix">%</span>
+          <p class="stat__label">Average productivity gain</p>
+        </div>
+        <div class="stat reveal">
+          <span class="stat__num" data-count="12000">0</span><span class="stat__suffix">+</span>
+          <p class="stat__label">Teams onboarded</p>
+        </div>
+        <div class="stat reveal">
+          <span class="stat__num" data-count="8">0</span><span class="stat__suffix">M+</span>
+          <p class="stat__label">Tasks auto-planned</p>
+        </div>
+        <div class="stat reveal">
+          <span class="stat__num" data-count="99" data-suffix=".9">0</span><span class="stat__suffix">%</span>
+          <p class="stat__label">Uptime SLA</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="pricing" id="pricing">
+      <div class="section-head">
+        <span class="section-eyebrow">Pricing</span>
+        <h2 class="section-title">Simple pricing that <span class="text-gradient">scales with you</span></h2>
+        <p class="section-sub">Start free. Upgrade when you're ready. Cancel anytime — no questions asked.</p>
+      </div>
+
+      <div class="pricing__toggle">
+        <span class="pricing__toggle-label" id="toggleMonthly">Monthly</span>
+        <button class="pricing__switch" id="pricingToggle" role="switch" aria-checked="false" aria-label="Toggle annual billing">
+          <span class="pricing__switch-knob"></span>
+        </button>
+        <span class="pricing__toggle-label" id="toggleAnnual">Annual</span>
+        <span class="pricing__save">Save 20%</span>
+      </div>
+
+      <div class="pricing__grid">
+        <!-- Free -->
+        <article class="plan">
+          <div class="plan__head">
+            <h3 class="plan__name">Starter</h3>
+            <p class="plan__desc">For individuals getting started</p>
+            <div class="plan__price">
+              <span class="plan__currency">$</span>
+              <span class="plan__amount" data-monthly="0" data-annual="0">0</span>
+              <span class="plan__period">/mo</span>
+            </div>
+          </div>
+          <ul class="plan__features">
+            <li><span class="check"></span> Up to 3 projects</li>
+            <li><span class="check"></span> AI daily plan (5/day)</li>
+            <li><span class="check"></span> Calendar sync</li>
+            <li><span class="check"></span> Mobile & desktop apps</li>
+            <li class="muted"><span class="check check--off"></span> Automations</li>
+            <li class="muted"><span class="check check--off"></span> Team collaboration</li>
+          </ul>
+          <a href="#" class="btn btn--ghost btn--block">Get started free</a>
+        </article>
+
+        <!-- Pro (highlighted) -->
+        <article class="plan plan--featured">
+          <span class="plan__badge">Most popular</span>
+          <div class="plan__head">
+            <h3 class="plan__name">Pro</h3>
+            <p class="plan__desc">For professionals & small teams</p>
+            <div class="plan__price">
+              <span class="plan__currency">$</span>
+              <span class="plan__amount" data-monthly="19" data-annual="15">19</span>
+              <span class="plan__period">/mo</span>
+            </div>
+          </div>
+          <ul class="plan__features">
+            <li><span class="check"></span> Unlimited projects</li>
+            <li><span class="check"></span> Unlimited AI daily plans</li>
+            <li><span class="check"></span> 25 automations</li>
+            <li><span class="check"></span> Team collaboration (5 seats)</li>
+            <li><span class="check"></span> Smart analytics</li>
+            <li><span class="check"></span> Priority support</li>
+          </ul>
+          <a href="#" class="btn btn--primary btn--block">Start 14-day trial</a>
+        </article>
+
+        <!-- Enterprise -->
+        <article class="plan">
+          <div class="plan__head">
+            <h3 class="plan__name">Enterprise</h3>
+            <p class="plan__desc">For organizations at scale</p>
+            <div class="plan__price">
+              <span class="plan__currency">$</span>
+              <span class="plan__amount" data-monthly="49" data-annual="39">49</span>
+              <span class="plan__period">/user/mo</span>
+            </div>
+          </div>
+          <ul class="plan__features">
+            <li><span class="check"></span> Everything in Pro</li>
+            <li><span class="check"></span> Unlimited automations</li>
+            <li><span class="check"></span> SSO / SAML</li>
+            <li><span class="check"></span> Audit logs & SCIM</li>
+            <li><span class="check"></span> Dedicated success manager</li>
+            <li><span class="check"></span> 99.9% uptime SLA</li>
+          </ul>
+          <a href="#" class="btn btn--ghost btn--block">Contact sales</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" id="faq">
+      <div class="section-head">
+        <span class="section-eyebrow">FAQ</span>
+        <h2 class="section-title">Questions? <span class="text-gradient">Answered.</span></h2>
+      </div>
+      <div class="faq__list">
+        <details class="faq__item">
+          <summary>How does the AI daily plan work?</summary>
+          <p>Every morning, TaskFlow AI analyzes your tasks, deadlines, calendar, and energy patterns to generate a prioritized plan. It blocks focus time, surfaces what's overdue, and auto-reschedules anything that slips — you just show up and execute.</p>
+        </details>
+        <details class="faq__item">
+          <summary>Can I import from my current tool?</summary>
+          <p>Yes. One-click import from Asana, Trello, Linear, Notion, Jira, and Todoist. Your projects, labels, and due dates come through intact, and AI re-prioritizes them on first load.</p>
+        </details>
+        <details class="faq__item">
+          <summary>Is my data secure?</summary>
+          <p>Always. We're SOC 2 Type II certified, encrypt data at rest with AES-256 and in transit with TLS 1.3, and never train AI models on your private data. Enterprise plans add SSO, SCIM, and audit logs.</p>
+        </details>
+        <details class="faq__item">
+          <summary>What happens when I cancel?</summary>
+          <p>You keep full access until the end of your billing period. After that, your account reverts to the free Starter plan — your data stays, read-only, for 90 days so you can export or return anytime.</p>
+        </details>
+        <details class="faq__item">
+          <summary>Do you offer discounts for startups or nonprofits?</summary>
+          <p>Yes — 50% off Pro for eligible early-stage startups (under 10 employees, under $2M raised) and registered nonprofits. Reach out to our team and we'll get you set up.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- CTA band -->
+    <section class="cta-band">
+      <div class="cta-band__inner">
+        <h2>Ready to reclaim your focus?</h2>
+        <p>Join 12,000+ teams shipping faster with TaskFlow AI. Free forever — upgrade only when you need more.</p>
+        <div class="cta-band__actions">
+          <a href="#pricing" class="btn btn--primary btn--lg">Start free today</a>
+          <a href="#" class="btn btn--ghost btn--lg">Book a demo</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <a href="#" class="nav__logo">
+            <span class="nav__logo-mark">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 6.5C4 5.12 5.12 4 6.5 4H21.5C22.88 4 24 5.12 24 6.5V21.5C24 22.88 22.88 24 21.5 24H6.5C5.12 24 4 22.88 4 21.5V6.5Z" stroke="url(#lg3)" stroke-width="2"/>
+                <path d="M9 14L13 18L19 10" stroke="url(#lg4)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <defs>
+                  <linearGradient id="lg3" x1="4" y1="4" x2="24" y2="24" gradientUnits="userSpaceOnUse"><stop stop-color="#a855f7"/><stop offset="1" stop-color="#06b6d4"/></linearGradient>
+                  <linearGradient id="lg4" x1="9" y1="14" x2="19" y2="10" gradientUnits="userSpaceOnUse"><stop stop-color="#06b6d4"/><stop offset="1" stop-color="#a855f7"/></linearGradient>
+                </defs>
+              </svg>
+            </span>
+            <span class="nav__logo-text">TaskFlow<span class="nav__logo-accent">AI</span></span>
+          </a>
+          <p class="footer__tagline">AI-powered productivity for teams who ship.</p>
+        </div>
+        <div class="footer__cols">
+          <div class="footer__col">
+            <h4>Product</h4>
+            <a href="#features">Features</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#">Integrations</a>
+            <a href="#">Changelog</a>
+          </div>
+          <div class="footer__col">
+            <h4>Company</h4>
+            <a href="#">About</a>
+            <a href="#">Blog</a>
+            <a href="#">Careers</a>
+            <a href="#">Contact</a>
+          </div>
+          <div class="footer__col">
+            <h4>Resources</h4>
+            <a href="#">Help center</a>
+            <a href="#">API docs</a>
+            <a href="#">Community</a>
+            <a href="#">Status</a>
+          </div>
+          <div class="footer__col">
+            <h4>Legal</h4>
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+            <a href="#">Security</a>
+            <a href="#">DPA</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 TaskFlow AI, Inc. All rights reserved.</p>
+        <div class="footer__social">
+          <a href="#" aria-label="Twitter"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+          <a href="#" aria-label="GitHub"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.37.5 0 5.78 0 12.29c0 5.21 3.38 9.63 8.07 11.19.59.11.81-.26.81-.57v-2c-3.28.71-3.98-1.58-3.98-1.58-.54-1.36-1.31-1.73-1.31-1.73-1.07-.73.08-.72.08-.72 1.18.08 1.8 1.21 1.8 1.21 1.05 1.8 2.76 1.28 3.43.98.11-.76.41-1.28.74-1.57-2.62-.3-5.37-1.31-5.37-5.83 0-1.29.46-2.34 1.21-3.17-.12-.3-.53-1.51.11-3.15 0 0 1-.32 3.28 1.21a11.4 11.4 0 0 1 6 0c2.28-1.53 3.28-1.21 3.28-1.21.64 1.64.24 2.85.12 3.15.75.83 1.21 1.88 1.21 3.17 0 4.53-2.76 5.52-5.39 5.81.42.36.81 1.08.81 2.18v3.24c0 .31.21.69.82.57A12.04 12.04 0 0 0 24 12.29C24 5.78 18.63.5 12 .5Z"/></svg></a>
+          <a href="#" aria-label="LinkedIn"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg></a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
